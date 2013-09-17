@@ -70,4 +70,21 @@
         android:ems="5"
         android:inputType="numberDecimal" />
 
+    <TextView
+        android:id="@+id/changeTipTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/finalBillTextView"
+        android:layout_alignBottom="@+id/finalBillTextView"
+        android:layout_alignLeft="@+id/billTextView"
+        android:text="@string/change_tip_text_view" />
+
+    <SeekBar
+        android:id="@+id/changeTipSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/finalBillEditText"
+        android:layout_toLeftOf="@+id/tipTextView"
+        android:progress="15" />
+
 </RelativeLayout>

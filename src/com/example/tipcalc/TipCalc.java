@@ -6,6 +6,8 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
 import android.widget.EditText;
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 
 public class TipCalc extends Activity {
 	
@@ -22,6 +24,8 @@ public class TipCalc extends Activity {
 	EditText billBeforeTipEditText;
 	EditText tipAmountEditText;
 	EditText finalBillEditText;
+	
+	private SeekBar tipSeekBar;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +57,10 @@ public class TipCalc extends Activity {
 		billBeforeTipEditText = (EditText) findViewById(R.id.billEditText);
 		tipAmountEditText = (EditText) findViewById(R.id.tipEditText);
 		finalBillEditText = (EditText) findViewById(R.id.finalBillEditText);
+		
+		tipSeekBar = (SeekBar) findViewById(R.id.changeTipSeekBar);
+		
+		tipSeekBar.setOnSeekBarChangeListener(tipSeekBarListener);
 		
 		// Add change listener for when the bill before tip is changed
 		
@@ -97,7 +105,7 @@ public class TipCalc extends Activity {
 	
 	private void updateTipAndFinalBill() {
 		
-		double TipAmount = Double.parseDouble(tipAmountEditText.getText().toString());
+		double tipAmount = Double.parseDouble(tipAmountEditText.getText().toString());
 		double finalBill = billBeforeTip + (billBeforeTip * tipAmount);
 		
 		finalBillEditText.setText(String.format("%.02f", finalBill));
@@ -111,7 +119,35 @@ public class TipCalc extends Activity {
 		outState.putDouble(TOTAL_BILL, finalBill);
 		outState.putDouble(CURRENT_TIP, tipAmount);
 		outState.putDouble(BILL_WITHOUT_TIP, billBeforeTip);
+	
 	}
+	
+	private OnSeekBarChangeListener tipSeekBarListener = new OnSeekBarChangeListener() {
+
+		@Override
+		public void onProgressChanged(SeekBar arg0, int arg1, boolean arg2) {
+			
+			tipAmount = (tipSeekBar.getProgress()) * .01;
+			
+			tipAmountEditText.setText(String.format("%0.02f", tipAmount));
+			
+			updateTipAndFinalBill();
+			
+		}
+
+		@Override
+		public void onStartTrackingTouch(SeekBar seekBar) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void onStopTrackingTouch(SeekBar seekBar) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	};
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
