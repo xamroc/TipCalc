@@ -129,7 +129,7 @@ public class TipCalc extends Activity {
 			
 			tipAmount = (tipSeekBar.getProgress()) * .01;
 			
-			tipAmountEditText.setText(String.format("%0.02f", tipAmount));
+			tipAmountEditText.setText(String.format("%.02f", tipAmount));
 			
 			updateTipAndFinalBill();
 			
