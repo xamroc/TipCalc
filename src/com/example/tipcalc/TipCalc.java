@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
@@ -26,6 +27,12 @@ public class TipCalc extends Activity {
 	EditText finalBillEditText;
 	
 	private SeekBar tipSeekBar;
+	
+	private int[] checkListValues = new int[12];
+	
+	CheckBox friendlyCheckBox;
+	CheckBox specialsCheckBox;
+	CheckBox opinionCheckBox;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

@@ -29,9 +29,9 @@
     <string name="time_waiting_text_view">Time Waiting for Service</string>
     <string name="start_chronometer_button">Start</string>
     <string name="pause_chronometer_button">Pause</string>
-    <string name="reset_chronometer_button">Good</string>
+    <string name="reset_chronometer_button">Reset</string>
     
-    <string-array name="problem-solving">
+    <string-array name="problem_solving">
         <item>Problem Solving</item>
         <item>Bad</item>
         <item>OK</item>
