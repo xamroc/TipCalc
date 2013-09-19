@@ -27,12 +27,12 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f090018;
-        public static final int availableBadRadio=0x7f09000f;
-        public static final int availableGoodRadio=0x7f090011;
-        public static final int availableOKRadio=0x7f090010;
-        public static final int availableRadioGroup=0x7f09000e;
-        public static final int availableTextView=0x7f09000d;
+        public static final int action_settings=0x7f090017;
+        public static final int availableBadRadio=0x7f09000e;
+        public static final int availableGoodRadio=0x7f090010;
+        public static final int availableOKRadio=0x7f09000f;
+        public static final int availableRadioGroup=0x7f09000d;
+        public static final int availableTextView=0x7f09000c;
         public static final int billEditText=0x7f090000;
         public static final int billTextView=0x7f090001;
         public static final int changeTipSeekBar=0x7f090007;
@@ -42,14 +42,13 @@ public final class R {
         public static final int friendlyCheckBox=0x7f090009;
         public static final int introTextView=0x7f090008;
         public static final int opinionCheckBox=0x7f09000a;
-        public static final int pauseChronometerButton=0x7f090016;
-        public static final int problemsSpinner=0x7f090012;
-        public static final int reserChronometerButton=0x7f090017;
-        public static final int specialsCheckBox=0x7f09000c;
-        public static final int specialsCheckBox2=0x7f09000b;
-        public static final int startChronometerButton=0x7f090015;
-        public static final int timeWaitingChronometer=0x7f090014;
-        public static final int timeWaitingTextView=0x7f090013;
+        public static final int pauseChronometerButton=0x7f090015;
+        public static final int problemsSpinner=0x7f090011;
+        public static final int resetChronometerButton=0x7f090016;
+        public static final int specialsCheckBox=0x7f09000b;
+        public static final int startChronometerButton=0x7f090014;
+        public static final int timeWaitingChronometer=0x7f090013;
+        public static final int timeWaitingTextView=0x7f090012;
         public static final int tipEditText=0x7f090003;
         public static final int tipTextView=0x7f090002;
     }

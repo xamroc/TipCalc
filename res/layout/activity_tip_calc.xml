@@ -108,9 +108,9 @@
         android:id="@+id/opinionCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/specialsCheckBox2"
-        android:layout_alignBottom="@+id/specialsCheckBox2"
-        android:layout_toRightOf="@+id/specialsCheckBox2"
+        android:layout_alignBaseline="@+id/specialsCheckBox"
+        android:layout_alignBottom="@+id/specialsCheckBox"
+        android:layout_toRightOf="@+id/specialsCheckBox"
         android:text="@string/intro_opinion_text_view" />
 
     <CheckBox
@@ -119,7 +119,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/friendlyCheckBox"
         android:layout_alignBottom="@+id/friendlyCheckBox"
-        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/friendlyCheckBox"
         android:text="@string/intro_specials_text_view" />
 
     <TextView
@@ -201,7 +201,7 @@
         android:text="@string/pause_chronometer_button" />
 
     <Button
-        android:id="@+id/reserChronometerButton"
+        android:id="@+id/resetChronometerButton"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
